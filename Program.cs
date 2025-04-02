@@ -11,9 +11,10 @@ namespace fluentNhibernateAutoplay
         {
             ISession session = HibernateUtil.getSession();
 
-            Cliente cliente = new Cliente("fulano", "fulando@gmail.com", "senhaFulano");
 
-            session.Save(cliente);
+            Cliente cliente1 = session.Get<Cliente>(1);
+            cliente1.Nome = "Henrique";
+            session.Update(cliente1);
         }
     }
 }

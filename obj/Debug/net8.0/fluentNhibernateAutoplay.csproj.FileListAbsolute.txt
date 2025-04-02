@@ -44,3 +44,4 @@ C:\dev\autoglass\fluentNhibernateAutoplay\obj\Debug\net8.0\refint\fluentNhiberna
 C:\dev\autoglass\fluentNhibernateAutoplay\obj\Debug\net8.0\fluentNhibernateAutoplay.pdb
 C:\dev\autoglass\fluentNhibernateAutoplay\obj\Debug\net8.0\fluentNhibernateAutoplay.genruntimeconfig.cache
 C:\dev\autoglass\fluentNhibernateAutoplay\obj\Debug\net8.0\ref\fluentNhibernateAutoplay.dll
+C:\dev\autoglass\fluentNhibernateAutoplay\obj\Debug\net8.0\fluentNhibernateAutoplay.sourcelink.json
