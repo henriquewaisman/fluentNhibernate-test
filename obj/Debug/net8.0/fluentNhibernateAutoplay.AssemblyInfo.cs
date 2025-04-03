@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fluentNhibernateAutoplay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35baff297ad86609b67e03179aa685ba80b71513")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0fc2fa4c39045fc0a636c01a17424aec55efdfa")]
 [assembly: System.Reflection.AssemblyProductAttribute("fluentNhibernateAutoplay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fluentNhibernateAutoplay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
