@@ -16,6 +16,7 @@ namespace fluentNhibernateAutoplay.infra.mapeamentos
             HasMany(cliente => cliente.Pedidos).KeyColumn("IDCLIENTE");
 
             // HasMany maps List<>
+            // KeyColumn recebe a FK da outra tabela relativo a entidade
         }
     }
 }

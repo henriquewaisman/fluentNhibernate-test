@@ -12,17 +12,18 @@ namespace fluentNhibernateAutoplay
             ISession session = HibernateUtil.getSession();
             ITransaction transaction = session.BeginTransaction();
 
-            // Cliente cliente = new Cliente("Luis", "luis@mail.com", "senhaLuis");
-            // Cliente cliente1 = new Cliente("Marcos", "marcos@mail.com", "senhaMarcos");
-            // Cliente cliente2 = new Cliente("Joao", "joao@mail.com", "senhaJoao");
-            // Cliente cliente3 = new Cliente("Maria", "maria@mail.com", "senhaMaria");
-            // Cliente cliente4 = new Cliente("Ana", "ana@mail.com", "senhaAna");
+            /*
+            Cliente cliente = new Cliente("Luis", "luis@mail.com", "senhaLuis");
+            Cliente cliente1 = new Cliente("Marcos", "marcos@mail.com", "senhaMarcos");
+            Cliente cliente2 = new Cliente("Joao", "joao@mail.com", "senhaJoao");
+            Cliente cliente3 = new Cliente("Maria", "maria@mail.com", "senhaMaria");
+            Cliente cliente4 = new Cliente("Ana", "ana@mail.com", "senhaAna");
 
-            // session.Save(cliente);
-            // session.Save(cliente1);
-            // session.Save(cliente2);
-            // session.Save(cliente3);
-            // session.Save(cliente4);
+            session.Save(cliente);
+            session.Save(cliente1);
+            session.Save(cliente3);
+            session.Save(cliente4);
+            session.Save(cliente2);
 
 
             Cliente cliente = session.Get<Cliente>(1);
@@ -42,7 +43,12 @@ namespace fluentNhibernateAutoplay
             session.Save(pedido2);
             session.Save(pedido3);
             session.Save(pedido4);
+            */
             
+            Cliente cliente = session.Get<Cliente>(1);
+            Console.WriteLine(cliente.Pedidos[0].Id);
+            Console.WriteLine(cliente.Pedidos[1].Id);
+
             transaction.Commit();
         }
     }
