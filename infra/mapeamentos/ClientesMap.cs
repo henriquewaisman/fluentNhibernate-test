@@ -14,6 +14,8 @@ namespace fluentNhibernateAutoplay.infra.mapeamentos
             Map(cliente => cliente.Email).Column("EMAIL");
             Map(cliente => cliente.Senha).Column("SENHA");
             HasMany(cliente => cliente.Pedidos).KeyColumn("IDCLIENTE");
+
+            // HasMany maps List<>
         }
     }
 }

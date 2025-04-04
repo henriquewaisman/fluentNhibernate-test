@@ -12,7 +12,6 @@ namespace fluentNhibernateAutoplay.infra.mapeamentos
             Id(pedido => pedido.Id).Column("ID");
             Map(pedido => pedido.DataPedido).Column("DATAPEDIDO");
             References(pedido => pedido.Cliente).Column("IDCLIENTE");
-
             /*
             Id maps PK
             Map maps Attributes

@@ -7,7 +7,7 @@ namespace fluentNhibernateAutoplay
 {
     static class Anotacao
     {
-        static void MainAnotacao()
+        static void Estudo()
         {
             ISession session = HibernateUtil.getSession();
             ITransaction transaction = session.BeginTransaction();
