@@ -64,12 +64,27 @@ namespace fluentNhibernateAutoplay
             session.Save(pedido2);
             session.Save(pedido3);
             session.Save(pedido4);
+            
+            Cliente cliente = session.Get<Cliente>(1);
+
+            Produto produto = new Produto("Coca", 8);
+            Produto produto1 = new Produto("Alfajor", 9.5f);
+            Produto produto2 = new Produto("Doce de Leite", 2.45f);
+
+            IList<Produto> produtos = new List<Produto>();
+            produtos.Add(produto);
+            produtos.Add(produto1);
+            produtos.Add(produto2);
+
+            session.Save(produto);
+            session.Save(produto1);
+            session.Save(produto2);
+
+            Pedido pedido = new Pedido(cliente, produtos);
+
+            session.Save(pedido);
             */
 
-            Cliente clienteSearch = session.Get<Cliente>(1);
-            //Buscas o Id dentro da lista de pedidos na classe Cliente
-            Console.WriteLine(clienteSearch.Pedidos[0].Id);
-            Console.WriteLine(clienteSearch.Pedidos[1].Id);
         }
     }
 }
