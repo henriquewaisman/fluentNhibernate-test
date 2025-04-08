@@ -11,34 +11,19 @@ namespace fluentNhibernateAutoplay
             ISession session = HibernateUtil.getSession();
             ITransaction transaction = session.BeginTransaction();
             
-            Cliente cliente = session.Get<Cliente>(1);
+            IQueryable<Pedido> query = session.Query<Pedido>();
 
-            Produto produto = new Produto("Coca", 8);
-            Produto produto1 = new Produto("Alfajor", 9.5f);
-            Produto produto2 = new Produto("Doce de Leite", 2.45f);
+            query = query.Where(pedido => pedido.Cliente.Nome == "Ana");
 
-            IList<Produto> produtos = new List<Produto>();
-            produtos.Add(produto);
-            produtos.Add(produto1);
-            produtos.Add(produto2);
+            IList<Pedido> pedidos = query.ToList();
 
-            session.Save(produto);
-            session.Save(produto1);
-            session.Save(produto2);
-
-            Pedido pedido = new Pedido(cliente, produtos);
-
-            session.Save(pedido);
+            foreach(var pedido in pedidos){
+                Console.WriteLine(pedido.Id);
+            }
             
-            // Pedido pedido1 = session.Get<Pedido>(11);
-
-            // var itens = pedido1.Produtos;
-
-            // Console.WriteLine($"A quantidade de itens no pedido {pedido1.Id} é {itens.Count()}:");
-            // foreach(var item in itens)
-            // {
-            //     Console.WriteLine($"{item.Id} - {item.Nome}");
-            // }
+            //Paginação
+            query = query.Skip(10).Take(10).Where(p => p.Cliente.Nome == "Marcos");
+            IList<Pedido> pedidos1 = query.ToList();
 
             transaction.Commit();
         }

@@ -85,6 +85,16 @@ namespace fluentNhibernateAutoplay
             session.Save(pedido);
             */
 
+            // Pedido pedido1 = session.Get<Pedido>(11);
+
+            // var itens = pedido1.Produtos;
+
+            // Console.WriteLine($"A quantidade de itens no pedido {pedido1.Id} é {itens.Count()}:");
+            // foreach(var item in itens)
+            // {
+            //     Console.WriteLine($"{item.Id} - {item.Nome}");
+            // }
+
         }
     }
 }
